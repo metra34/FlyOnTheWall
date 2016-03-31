@@ -1,0 +1,16 @@
+DROP TABLE IF EXISTS userinfo CASCADE;
+DROP TABLE IF EXISTS yaks;
+
+CREATE TABLE userinfo (
+	username VARCHAR(20) PRIMARY KEY,
+	name VARCHAR(30) NOT NULL,
+	email VARCHAR(30) NOT NULL,
+	password1 VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE yaks(
+	username VARCHAR(20) REFERENCES userinfo,
+	theTime TIMESTAMP NOT NULL,
+	whereAt VARCHAR(100), 
+	msg TEXT NOT NULL
+);

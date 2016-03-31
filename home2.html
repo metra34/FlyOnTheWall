@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Yak Clone</title>
+		<script src="jquery-2.1.0.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js"></script>
+		<script src="controlJs.js"></script>
+		
+		<style type="text/css">
+			<!-- nav bar start--->
+			#topDiv ul
+			{
+				margin: 0;
+				padding: 0;
+				list-style-type: none;
+				text-align: center;
+			}
+
+			#topDiv ul li { display: inline; }
+
+			#topDiv ul li a
+			{
+				text-decoration: none;
+				padding: .2em 1em;
+				color: #fff;
+				background-color: #036;
+			}
+
+			#topDiv ul li a:hover
+			{
+				color: #fff;
+				background-color: #369;
+			}
+			
+			#topDiv ul li a:active
+			{
+				color: #fff;
+				background-color: #369;
+			}
+			<!-- nav bar end--->
+			
+			body {
+				margin: 0;
+				padding: 0;
+				position: relative;
+			}
+			
+			<!--google map-->
+			#mapCanvas {
+				width: 500px;
+				height: 400px;
+				background-color: #CCC;
+			}
+			<!--google map END-->
+
+			
+		</style>
+	</head>
+	<body onload="">
+		<!-- Always visible (when logged in) page header, nav bar -->
+		<div id="topDiv">
+			<ul>
+				<li><a id="main" onclick="switchView('main')">Main</a></li><li><a id="map" onclick="switchView('map')">Map</a></li>
+			</ul>
+		</div>
+		<header>
+		<h1 id="homeHead">Home</h1>
+		<h3 id="hiddenUser"></h3>
+		</header>
+		<!-- Always visible page header, nav bar END-->
+		
+		<!-- PAGE 1 -->
+		<section id="page1" class="notLogged">
+			<div style="width: 100%; display: table;">
+				<div style="display: table-row">
+				<div id="leftI" style="display: table-cell;"> 
+				<!-- 	Left side, Registration -->
+					<p id="signMsg">New to Yak? Sign Up today!</p>
+					<form onsubmit="return false;" id="registrationForm">
+						<h3>Registration</h3></td>
+						<pre>
+						<br/><label for="e">Email<br/>Address :</label> <input id="e" type="email" name="email" size="25" required><div class="error" id="emailError"></div>
+						<br/><label for="u">Username:</label> <input id="u" type="text" name="usern" size="25" required><div class="error" id="userError"></div>
+						<br/><label for="p">Password:</label> <input id="p" type="password" name="pass" size="25" required><div class="error" id="passwordError"></div>
+						<br/><label for="p2">Confirm<br/>Password:</label> <input id="p2" type="password" name="pass2" size="25" required>
+						</pre>
+						<input type="submit" id="registerBtn" name="registerAct" value="signUp" onclick="register()">
+					</form>
+					<!-- Registration End -->
+				</div>
+				<div id="rightI" style="display: table-cell;"> 
+					<!-- login start -->
+					<table width="300" border="0" align="center" cellpadding="0" cellspacing="1">
+					<tr>
+					<form onsubmit="return false;" name="form1" method="post">
+					<td>
+					<table width="100%" border="0" cellpadding="3" cellspacing="1">
+					<tr>
+					<td colspan="3"><h3>Member Login</h3></td>
+					</tr>
+					<tr>
+					<td>Username</td>
+					<td>:</td>
+					<td><input name="user" id="usernameJs" type="text" required></td>
+					</tr>
+					<tr>
+					<td>Password</td>
+					<td>:</td>
+					<td><input name="logPass" id="logPassJs" type="password" required></td>
+					</tr>
+					<tr>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td><input type="submit" name="actionL" value="Login" onclick="login()"></td>
+					</tr>
+					</table>
+					</td>
+					</form>
+					</tr>
+					</table>
+					<!-- login end -->
+				</div>
+				</div>
+			</div>
+		</section>
+		<!-- PAGE 1 END-->
+		
+		<!--PAGE 2-->
+		<div id="page2">
+			<center>
+			<div class="userInput" id="2bottom">
+			<form onsubmit="return false;" name="messageForm">
+			<input type="text" id="inputBox" name="nameinputBox" value="">
+			<input type="submit" name="sendYak" value="Chat" onclick="addMessage(document.messageForm.inputBox.value)";>
+			</br>
+			</br>
+			</form>
+			</div>
+			<div id="2top">
+			This will be WHERE MSGS GO
+			</div>
+			</center>
+		</div>
+		<!--PAGE 2 END-->
+		
+		<!--Page 3-->
+		<div id="page3">
+		<body>
+		<div id="mapCanvas"></div>
+		</body>
+		</div>
+		<!--Page 3 END-->
+		
+		<!-- ALWAYS VISIBLE FOOTER -->
+		<div id="footer">
+		<footer>
+			<div id="status">THIS IS THE STATUS BAR</div>
+			<h3>Return</h3>
+			<ul>
+				<li><a href="link1.html">One link</a></li>
+				<li><a href="link2.html">Another link</a></li>
+				<li><a href="../index.html">cs home</a></li>
+			</ul>
+		</footer>
+		</div>
+		<!-- ALWAYS VISIBLE FOOTER END-->
+	</body>
+</html>
+

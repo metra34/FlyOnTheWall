@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Home Page</title>
+		<script src="jquery-2.1.0.js"></script>
+		<script>
+		// See the JQuery documentation at ... 
+		// http://api.jquery.com/
+		// http://learn.jquery.com/
+		// See my JQuery and Ajax notes
+		xmlHttp=null;
+		var comment="";
+		var html="";
+		var user=null;
+		
+		
+		</script>
+		
+		
+		<style type="text/css">
+			body {
+				position: relative; margin: 0; padding: 0; 
+				background-color: #b0c4de;
+				<!-- background-image: url("paper.gif"); -->
+				<!-- background-repeat: no-repeat; -->
+				<!-- background-position: right top; -->
+				}
+			nav {
+        			position: absolute; top: 52px; left: 0;
+        			width: 160px; height: 700px;
+        			font: 16px Verdana, sans-serif;
+			}
+			
+			nav a {
+        			display: block;
+        			text-align: center;
+        			font: bold 1em sans-serif;
+        			padding: 5px 10px; /* top and bottom, left and right */
+        			margin: 0 0 2px 0; /* top right bottom left */
+        			border-width: 2px;
+					border-style: solid;
+					border-color: blue;
+					/* border-width: 0px; */
+        			text-decoration: none; /* none, underline, overline, blink */
+        			color: #000;
+        			background:#ACE;
+			}
+			nav a:hover {color: #fff;}
+			
+			section.cl {
+        			position: absolute;
+        			top: 26px; left: 161px; right: 25px;
+        			color: #f00;
+        			font: 13px Verdana, sans-serif;
+        			padding: 10px;
+        			border: solid #FFCC99;
+			}
+			section p {margin: 0 1em 1em;}
+			section h3 {margin-bottom: 0.25em;}
+			section a:link {color: grey;}
+			section a:visited {color: #BBC;}
+			section a:link:hover {color: #FF0;}
+			section a:visited:hover {color: #CC0;}
+
+			section header h1 {
+        			margin: -9px -9px 0.5em;
+        			padding: 15px 0px 5px;
+        			text-align: right;
+        			background: #ACE;
+        			color: #024;
+        			letter-spacing: 0.5em;
+        			text-transform: uppercase;
+        			font: bold 25px sans-serif;
+        			height: 28px;
+        			white-space: nowrap;
+			}
+			section dt {font-weight: bold;}
+			section dd {margin-bottom: 0.66em;}
+			section code, section pre {color: #0f0; font: 110% monospace;}
+			
+		</style>
+	</head>
+	<body>
+		<nav>
+			<a href="">Home</a>
+			<a href="">Courses</a>
+			<a href="">News</a>
+		</nav>
+		<section class="cl">
+			<header><h1>Home</h1></header>
+			<!-- login start -->
+			<table width="300" border="0" align="center" cellpadding="0" cellspacing="1">
+			<tr>
+			<form name="form1" method="post">
+			<td>
+			<table width="100%" border="0" cellpadding="3" cellspacing="1">
+			<tr>
+			<td colspan="3"><h3>Member Login</h3></td>
+			</tr>
+			<tr>
+			<td>Username</td>
+			<td>:</td>
+			<td><input name="user" type="text"></td>
+			</tr>
+			<tr>
+			<td>Password</td>
+			<td>:</td>
+			<td><input name="logPass" type="password"></td>
+			</tr>
+			<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td><input type="submit" name="actionL" value="Login"></td><td><a href="">Sign Up</a></td>
+			</tr>
+			</table>
+			</td>
+			</form>
+			</tr>
+			</table>
+			<!-- login end -->
+			
+			<p>
+				A paragraph <code>public static viod main(String [] args);</code>
+				with lots of words. And some more words and more words.
+				A paragraph <code>public static viod main(String [] args);</code>
+				with lots of words. And some more words and more words.
+				And some more words and more words.
+				And some more words and more words.
+				And some more words and more words.
+				And some more words and more words.
+				And some more words and more words.
+				And some more words and more words.
+				And some more words and more words.
+				And some more words and more words.
+				And some more words and more words.
+				And some more words and more words.
+			</p>
+			<p>
+				A paragraph <code>public static viod main(String [] args);</code>
+				with lots of words. And some more words and more words.
+				A paragraph <code>public static viod main(String [] args);</code>
+				with lots of words. And some more words and more words.
+				And some more words and more words.
+				And some more words and more words.
+				And some more words and more words.
+				And some more words and more words.
+				And some more words and more words.
+				And some more words and more words.
+				And some more words and more words.
+				And some more words and more words.
+				And some more words and more words.
+				And some more words and more words.
+			</p>
+		</section>
+		<section>
+		<div style="width: 100%; display: table;">
+			<div style="display: table-row">
+			<div style="width: 600px; display: table-cell;"> Left </div>
+			<div style="display: table-cell;"> Right </div>
+			</div>
+		</div>
+		<footer>
+			<h3>Return</h3>
+			<ul>
+				<li><a href="link1.html">One link</a></li>
+				<li><a href="link2.html">Another link</a></li>
+				<li><a href="../index.html">cs home</a></li>
+			</ul>
+		</footer>
+		</section>
+	</body>
+</html>
+
